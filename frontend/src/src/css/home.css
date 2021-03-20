@@ -1,0 +1,19 @@
+.feature1 {
+	background: url("../images/simple.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.feature2 {
+	background: url("../images/accessible.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.feature3 {
+	background: url("../images/security.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.feature4 {
+	background: url("../images/privacy.jpg") no-repeat center center;
+	background-size: cover;
+}

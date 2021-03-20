@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+	font-family: "Roboto", sans-serif !important;
+	font-weight: bolder !important;
+}
+
+body {
+	max-width: 100% !important;
+	overflow-x: hidden !important;
+}
+
+.custom > .ant-card-body {
+	/* padding: 5px; */
+	padding-bottom: 0 !important;
+	padding-top: 8px;
+}
+
+.custom > * > * > .ant-card-head-title {
+	padding: 8px 0;
+}
+
+.ant-modal-footer:parent > .custom {
+	padding: 0 !important;
+}
+
+.overflowYHidden {
+	overflow-y: hidden;
+	text-overflow: ellipsis;
+	white-space: pre-wrap;
+}
+
+.lineClamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	/* height: 110px; */
+}
+
+.border {
+	border-width: 1px !important;
+	border-style: solid;
+	border-color: rgb(195, 192, 192) !important;
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-width: 5px;
+	scrollbar-color: #10239e #adc6ff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #adc6ff;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #10239e;
+}
+
+div.customHeader {
+	position: relative;
+	background-color: #343a40;
+	background: url("../images/colornote.jpg") no-repeat center center;
+	background-size: cover;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+}
+
+div.customHeader .overlay {
+	position: absolute;
+	background-color: #212529;
+	height: 10%;
+	width: 10%;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+}
+
+header.masthead h1 {
+	font-size: 2rem;
+}
+
+.writing::after,
+.writing::before {
+	/* 	position: absolute; */
+	letter-spacing: 2px;
+	font-size: 30px;
+	animation-name: write;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.7, 0.45, 0.97, 0.36);
+}
+.writing::before {
+	font-size: 25px;
+	content: "_";
+	/* top: 70px; */
+	color: #000;
+	background-color: #fff;
+	animation-name: write;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.7, 0.45, 0.97, 0.36);
+}
+
+@keyframes write {
+	0% {
+		content: "_";
+	}
+	1% {
+		content: "S_";
+	}
+	2% {
+		content: "SI_";
+	}
+	3% {
+		content: "SIM_";
+	}
+	4% {
+		content: "SIMP_";
+	}
+	5% {
+		content: "SIMPL_";
+	}
+	6% {
+		content: "SIMPLE_";
+	}
+	7% {
+		content: "SIMPLE_";
+	}
+	8% {
+		content: "SIMPLE_";
+	}
+	9% {
+		content: "SIMPL_";
+	}
+	10% {
+		content: "SIMP_";
+	}
+	11% {
+		content: "SIM_";
+	}
+	12% {
+		content: "SI_";
+	}
+	13% {
+		content: "S_";
+	}
+	14% {
+		content: "_";
+	}
+	15% {
+		content: "_";
+	}
+	16% {
+		content: "A_";
+	}
+	17% {
+		content: "AC_";
+	}
+	18% {
+		content: "ACC_";
+	}
+	19% {
+		content: "ACCE_";
+	}
+	20% {
+		content: "ACCES_";
+	}
+	21% {
+		content: "ACCESS_";
+	}
+	22% {
+		content: "ACCESSI_";
+	}
+	23% {
+		content: "ACCESSIB_";
+	}
+	24% {
+		content: "ACCESSIBL_";
+	}
+	25% {
+		content: "ACCESSIBLE_";
+	}
+	26% {
+		content: "ACCESSIBLE_";
+	}
+	27% {
+		content: "ACCESSIBLE_";
+	}
+	28% {
+		content: "ACCESSIBL_";
+	}
+	29% {
+		content: "ACCESSIB_";
+	}
+	30% {
+		content: "ACCESSI_";
+	}
+	31% {
+		content: "ACCESS_";
+	}
+	32% {
+		content: "ACCES_";
+	}
+	33% {
+		content: "ACCE_";
+	}
+	34% {
+		content: "ACC_";
+	}
+	35% {
+		content: "AC_";
+	}
+	36% {
+		content: "A_";
+	}
+	37% {
+		content: "_";
+	}
+	38% {
+		content: "_";
+	}
+	39% {
+		content: "S_";
+	}
+	40% {
+		content: "SE_";
+	}
+	41% {
+		content: "SEC_";
+	}
+	42% {
+		content: "SECU_";
+	}
+	43% {
+		content: "SECUR_";
+	}
+	44% {
+		content: "SECURE_";
+	}
+	45% {
+		content: "SECURE_";
+	}
+	46% {
+		content: "SECURE_";
+	}
+	47% {
+		content: "SECUR_";
+	}
+	48% {
+		content: "SECU_";
+	}
+	49% {
+		content: "SEC_";
+	}
+	50% {
+		content: "SE_";
+	}
+	51% {
+		content: "S_";
+	}
+	52% {
+		content: "_";
+	}
+	53% {
+		content: "_";
+	}
+	54% {
+		content: "P_";
+	}
+	55% {
+		content: "PR_";
+	}
+	56% {
+		content: "PRI_";
+	}
+	57% {
+		content: "PRIV_";
+	}
+	58% {
+		content: "PRIVA_";
+	}
+	59% {
+		content: "PRIVAT_";
+	}
+	60% {
+		content: "PRIVATE_";
+	}
+	61% {
+		content: "PRIVATE_";
+	}
+	62% {
+		content: "PRIVATE_";
+	}
+	63% {
+		content: "PRIVAT_";
+	}
+	64% {
+		content: "PRIVA_";
+	}
+	65% {
+		content: "PRIV_";
+	}
+	66% {
+		content: "PRI_";
+	}
+	67% {
+		content: "PR_";
+	}
+	68% {
+		content: "P_";
+	}
+	69% {
+		content: "_";
+	}
+	70% {
+		content: "_";
+	}
+	71% {
+		content: "A";
+	}
+	72% {
+		content: "AW_";
+	}
+	73% {
+		content: "AWE_";
+	}
+	74% {
+		content: "AWES_";
+	}
+	75% {
+		content: "AWESO_";
+	}
+	76% {
+		content: "AWESOM_";
+	}
+	77% {
+		content: "AWESOME_";
+	}
+	78% {
+		content: "AWESOME_";
+	}
+	79% {
+		content: "AWESOME_";
+	}
+	80% {
+		content: "AWESOM_";
+	}
+	81% {
+		content: "AWESO_";
+	}
+	82% {
+		content: "AWES_";
+	}
+	83% {
+		content: "AWE_";
+	}
+	84% {
+		content: "AW_";
+	}
+	85% {
+		content: "A_";
+	}
+	86% {
+		content: "_";
+	}
+	87% {
+		content: "_";
+	}
+	88% {
+		content: ":_";
+	}
+	89% {
+		content: ":)_";
+	}
+	90% {
+		content: ":)_";
+	}
+	91% {
+		content: ":)_";
+	}
+	92% {
+		content: ":)_";
+	}
+	93% {
+		content: ":)_";
+	}
+	94% {
+		content: ":)_";
+	}
+	95% {
+		content: ":)_";
+	}
+	96% {
+		content: ":)_";
+	}
+	97% {
+		content: ":)_";
+	}
+	98% {
+		content: "_";
+	}
+	99% {
+		content: "_";
+	}
+	100% {
+		content: "_";
+	}
+}

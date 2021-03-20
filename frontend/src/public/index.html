@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta
+			name="description"
+			content="Web site created using create-react-app"
+		/>
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<!-- /Bootstrap -->
+
+		<!-- capcha -->
+		<script
+			src="https://www.google.com/recaptcha/api.js?render=explicit"
+			async
+			defer
+		></script>
+
+		<!-- <script type="text/javascript">
+			var onloadCallback = function () {
+				grecaptcha.render("html_element", {
+					sitekey: "your_site_key",
+				});
+			};
+		</script> -->
+		<!-- /capcha -->
+		<title>React App</title>
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root"></div>
+		<!-- Bootstrap -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			crossorigin="anonymous"
+		></script>
+		<!-- /Bootstrap -->
+
+		<script>
+			if ("serviceWorker" in navigator) {
+				//window.addEventListener("load", () => {
+				navigator.serviceWorker
+					.register("./serviceWorker.js")
+					.then((reg) => console.log("Success: ", reg.scope))
+					.catch((err) => console.log(err));
+				//});
+			}
+		</script>
+	</body>
+</html>
