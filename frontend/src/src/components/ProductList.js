@@ -1,35 +1,8 @@
 import { connect } from "react-redux";
-import { Table, Tag, Space } from "antd";
+import { Table, Button } from "antd";
 
 const ProductList = (props) => {
-	const { Column, ColumnGroup } = Table;
-
-	const data = [
-		{
-			key: "1",
-			firstName: "John",
-			lastName: "Brown",
-			age: 32,
-			address: "New York No. 1 Lake Park",
-			tags: ["nice", "developer"],
-		},
-		{
-			key: "2",
-			firstName: "Jim",
-			lastName: "Green",
-			age: 42,
-			address: "London No. 1 Lake Park",
-			tags: ["loser"],
-		},
-		{
-			key: "3",
-			firstName: "Joe",
-			lastName: "Black",
-			age: 32,
-			address: "Sidney No. 1 Lake Park",
-			tags: ["cool", "teacher"],
-		},
-	];
+	const { Column } = Table;
 
 	return (
 		<>
@@ -53,6 +26,27 @@ const ProductList = (props) => {
 					dataIndex="description"
 					key="description"
 					align="center"
+				/>
+				<Column
+					title="Edit"
+					dataIndex="pk"
+					key="pk"
+					align="center"
+					render={(text, record, index) => {
+						return (
+							<>
+								<Button
+									size="small"
+									ghost
+									type="primary"
+									onClick={() => {
+										props.history.push(`/products/edit/${text}`);
+									}}>
+									Edit
+								</Button>
+							</>
+						);
+					}}
 				/>
 			</Table>
 		</>

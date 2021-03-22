@@ -26,7 +26,6 @@ export const authFail = (error) => {
 };
 
 export const logout = () => {
-	console.log(window.location);
 	if (window.location.pathname !== "/") {
 		window.location = "/";
 	}
@@ -93,7 +92,6 @@ export const login = (username, password) => {
 				},
 			)
 			.then((res) => {
-				console.log(res);
 				if (res.data.key !== null && res.data.key !== undefined) {
 					const token = res.data.key;
 

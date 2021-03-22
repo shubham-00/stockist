@@ -51,7 +51,6 @@ export const fetchProducts = (token) => {
 				},
 			)
 			.then((res) => {
-				console.log(res);
 				if (res.data.detail !== null && res.data.detail !== undefined) {
 					dispatch(authActions.logout());
 					notification.error({

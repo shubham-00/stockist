@@ -1,14 +1,19 @@
 import { connect } from "react-redux";
 import { Form, Input, Button, InputNumber, Select, notification } from "antd";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import axios from "axios";
 import * as productActions from "../store/actions/productActions";
 import * as authActions from "../store/actions/authAction";
 
 const baseUrl = "http://127.0.0.1:8000/";
 
-const ProductForm = (props) => {
+const ProductCreate = (props) => {
 	const formRef = useRef();
+	const nameRef = useRef();
+
+	useEffect(() => {
+		nameRef.current.focus();
+	}, []);
 
 	const onFinish = (values) => {
 		createProduct(props.token, values, props.productList);
@@ -33,7 +38,6 @@ const ProductForm = (props) => {
 				},
 			)
 			.then((res) => {
-				console.log(res);
 				if (res.data.error !== null && res.data.detail !== undefined) {
 					props.logout();
 					notification.error({
@@ -61,6 +65,7 @@ const ProductForm = (props) => {
 						duration: 3,
 					});
 					formRef.current.resetFields();
+					nameRef.current.focus();
 				}
 			})
 			.catch((err) => {
@@ -93,7 +98,7 @@ const ProductForm = (props) => {
 											message: "Enter your product's name!",
 										},
 									]}>
-									<Input />
+									<Input ref={nameRef} />
 								</Form.Item>
 
 								<Form.Item
@@ -175,4 +180,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductCreate);
