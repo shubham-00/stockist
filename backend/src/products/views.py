@@ -49,7 +49,8 @@ def edit_view(request):
         # product.opening = serializer.validated_data.get("opening")
         # product.unit = serializer.validated_data.get("unit")
         # product.save()
-        serializer.save()
+        serializer.save(current=product.current + serializer.validated_data.get("opening") - product.opening)
+
         return Response(serializer.data)
 
     else:
